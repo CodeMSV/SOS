@@ -1,102 +1,184 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Innovación Sostenible - Servicios</title>
-  <!-- Bootstrap CSS v5.3 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- AOS CSS para animaciones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <!-- Menú de Navegación -->
-  <nav class="navbar navbar-expand-lg fixed-top py-3">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Innovación</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link active" href="servicios.html">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="normativa.html">Normativa</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Espacio para compensar el fixed-top -->
-  <div class="offset-top"></div>
-
-  <!-- Sección: Servicios Ecosostenibles Rediseñada -->
-  <section id="servicios" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4" data-aos="fade-up">Servicios Ecosostenibles</h2>
-      <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="150">
-        Descubre nuestras soluciones innovadoras que combinan tecnología y sostenibilidad para transformar la logística y el transporte.
-      </p>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4" data-aos="fade-up">
-          <div class="service-card">
-            <div class="service-img service-img-envios"></div>
-            <div class="service-overlay">
-              <h5>Envíos Ecosostenibles</h5>
-              <p>Optimización de rutas y flota híbrida para reducir la huella de carbono.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-card">
-            <div class="service-img service-img-furgoneta"></div>
-            <div class="service-overlay">
-              <h5>Furgoneta Eléctrica</h5>
-              <p>Vehículos 100% eléctricos para entregas urbanas sin emisiones contaminantes.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-card">
-            <div class="service-img service-img-dron"></div>
-            <div class="service-overlay">
-              <h5>Dron de Entrega</h5>
-              <p>Drones de alta eficiencia para entregas rápidas con mínima huella ecológica.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-card">
-            <div class="service-img service-img-embalaje"></div>
-            <div class="service-overlay">
-              <h5>Embalaje Biodegradable</h5>
-              <p>Innovadores embalajes hechos de materiales reciclables y biodegradables.</p>
-            </div>
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Innovación Sostenible - Servicios</title>
+    <!-- Bootstrap CSS v5.3 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS para animaciones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Para que las columnas dentro de #servicios-cards se comporten como items flexibles */
+      #servicios-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+      /* Eliminamos el width de Bootstrap para que el flex funcione */
+      #servicios-cards .service-col {
+        flex: 1 1 auto;
+        width: auto !important;
+        transition: flex 0.6s ease;
+      }
+      /* Cuando se expande la carta, la columna crece (por ejemplo, 1.3 veces) */
+      #servicios-cards .service-col.expanded {
+        flex: 1.3 1 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Menú de Navegación (sin cambios) -->
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Innovación</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="proyectos.html">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="normativa.html">Normativa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contact">Contacto</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Footer -->
-  <footer class="py-3 bg-dark text-white">
-    <div class="container text-center">
-      <p class="mb-0">&copy; 2025 Innovación Tecnológica. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+    <!-- Espacio para compensar el fixed-top -->
+    <div class="offset-top"></div>
 
-  <!-- Scripts: Bootstrap Bundle y AOS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-  </script>
-</body>
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">
+          Elige tu Plan de Envío
+        </h2>
+        <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="150">
+          Selecciona el plan que más se ajuste a tus necesidades.
+        </p>
+        <div class="row" id="servicios-cards"></div>
+      </div>
+    </section>
+
+    <!-- Footer (sin cambios) -->
+    <footer>
+      <div class="container text-center">
+        <p class="mb-0">
+          &copy; 2025 Innovación Tecnológica. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const services = [
+          {
+            id: "estandar",
+            title: "EcoDrive",
+            image: "../AMAZON/media/furgo.jpeg",
+            details:
+              "Entrega con vehículos eléctricos para reducir emisiones. Ideal para zonas urbanas y suburbanas.",
+          },
+          {
+            id: "express",
+            title: "SkyDrop",
+            image: "../AMAZON/media/dron2.jpg",
+            details:
+              "Drones eléctricos entregan paquetes ligeros de forma rápida y sin congestión vial.",
+          },
+          {
+            id: "premium",
+            title: "SolarRoute",
+            image: "../AMAZON/media/bici.jpeg",
+            details:
+              "Repartidores en bicicletas eléctricas con estaciones de carga solar para una entrega sostenible.",
+          },
+          {
+            id: "eco",
+            title: "ZeroWaste",
+            image: "../AMAZON/media/zero.webp",
+            details:
+              "Reparto en horarios optimizados con embalajes biodegradables para minimizar residuos.",
+          },
+        ];
+
+        const cardsContainer = document.getElementById("servicios-cards");
+
+        services.forEach((service) => {
+          const col = document.createElement("div");
+          // Agregamos clase "service-col" para que el flex funcione
+          col.className = "col-md-6 col-lg-3 service-col";
+          col.setAttribute("data-aos", "fade-up");
+          col.innerHTML = `
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <!-- Cara frontal: imagen y título -->
+              <div class="flip-card-front">
+                <img src="${service.image}" alt="${service.title}" class="card-img">
+                <div class="service-title">
+                  <h5>${service.title}</h5>
+                </div>
+              </div>
+              <!-- Cara trasera: descripción -->
+              <div class="flip-card-back">
+                <p>${service.details}</p>
+              </div>
+            </div>
+          </div>
+        `;
+          const flipCard = col.querySelector(".flip-card");
+          // Al pasar el cursor, agregamos la clase 'flipped' al flip-card y 'expanded' a la columna para que se reordene el layout
+          flipCard.addEventListener("mouseenter", function () {
+            this.classList.add("flipped");
+            col.classList.add("expanded");
+          });
+          flipCard.addEventListener("mouseleave", function () {
+            this.classList.remove("flipped");
+            col.classList.remove("expanded");
+          });
+
+          cardsContainer.appendChild(col);
+        });
+      });
+    </script>
+  </body>
 </html>

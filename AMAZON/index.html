@@ -1,153 +1,265 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Innovación Sostenible - Visión Global</title>
-  <!-- Bootstrap CSS v5.3 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- AOS CSS para animaciones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <!-- Menú de Navegación -->
-  <nav class="navbar navbar-expand-lg fixed-top py-3">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Innovación</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="normativa.html">Normativa</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Espacio para compensar el fixed-top -->
-  <div class="offset-top"></div>
-
-  <!-- Hero Section con Carousel -->
-  <section id="hero" class="hero-section carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item hero1 active">
-        <div class="overlay"></div>
-        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">
-          <h1>Innovación Sostenible</h1>
-          <p>Transformamos el futuro con ecodiseño y economía circular en Amazon.</p>
-          <a href="proyectos.html" class="btn btn-outline-light btn-lg">Descubre nuestros Proyectos</a>
-        </div>
-      </div>
-      <div class="carousel-item hero2">
-        <div class="overlay"></div>
-        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">
-          <h1>Innovación Sostenible</h1>
-          <p>Visión global para un mundo mejor.</p>
-          <a href="proyectos.html" class="btn btn-outline-light btn-lg">Descubre nuestros Proyectos</a>
-        </div>
-      </div>
-      <div class="carousel-item hero3">
-        <div class="overlay"></div>
-        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">
-          <h1>Innovación Sostenible</h1>
-          <p>Soluciones ecoamigables que impulsan el cambio.</p>
-          <a href="proyectos.html" class="btn btn-outline-light btn-lg">Descubre nuestros Proyectos</a>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </section>
-
-  <!-- Sección: Visión Global del Proyecto -->
-  <section id="vision-global">
-    <div class="container">
-      <h2 class="text-center" data-aos="fade-up">Visión Global</h2>
-      <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="200">
-        Con base en análisis de casos y estudios previos, hemos seleccionado a Amazon para emprender un proyecto transformador. Inspirados en plataformas disruptivas, buscamos rediseñar productos y servicios a través del ecodiseño y la economía circular, generando un impacto positivo en el medio ambiente.
-      </p>
-      <div class="row align-items-center">
-        <div class="col-md-6" data-aos="fade-right">
-          <img src="media/global-vision.jpg" alt="Visión global" class="img-fluid rounded shadow-lg">
-        </div>
-        <div class="col-md-6" data-aos="fade-left">
-          <h3>Contexto y Objetivos</h3>
-          <p>
-            Aprovechando experiencias previas y el análisis de empresas líderes, proponemos:
-          </p>
-          <ul>
-            <li>Análisis integral del ciclo de vida.</li>
-            <li>Aplicación de estrategias de ecodiseño para minimizar el impacto ambiental.</li>
-            <li>Integración de la normativa vigente para impulsar la economía circular.</li>
-            <li>Creación de una plataforma digital innovadora inspirada en Vinted.</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Innovación Sostenible - Visión Global</title>
+    <!-- Bootstrap CSS v5.3 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS para animaciones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Menú de Navegación -->
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Innovación</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="proyectos.html">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="normativa.html">Normativa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contacto</a>
+            </li>
           </ul>
         </div>
       </div>
-      <!-- Video de Presentación -->
-      <div class="row mt-5" data-aos="zoom-in">
-        <div class="col">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/abc123" title="Presentación del Proyecto" allowfullscreen></iframe>
+    </nav>
+
+    <!-- Espacio para compensar el fixed-top -->
+    <div class="offset-top"></div>
+
+    <!-- Hero Section con Carousel -->
+    <section
+      id="hero"
+      class="hero-section carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item hero1 active">
+          <div class="overlay"></div>
+          <div
+            class="carousel-caption d-flex flex-column justify-content-center align-items-center"
+            data-aos="fade-up"
+          >
+            <h1>Innovación Sostenible</h1>
+            <p>
+              Transformamos el futuro con ecodiseño y economía circular en
+              Amazon.
+            </p>
+            <a href="proyectos.html" class="btn btn-outline-light btn-lg"
+              >Descubre nuestros Proyectos</a
+            >
+          </div>
+        </div>
+        <div class="carousel-item hero2">
+          <div class="overlay"></div>
+          <div
+            class="carousel-caption d-flex flex-column justify-content-center align-items-center"
+            data-aos="fade-up"
+          >
+            <h1>Vehículos eléctricos</h1>
+            <p>Visión global para un mundo mejor.</p>
+            <a href="proyectos.html" class="btn btn-outline-light btn-lg"
+              >Descubre nuestros Proyectos</a
+            >
+          </div>
+        </div>
+        <div class="carousel-item hero3">
+          <div class="overlay"></div>
+          <div
+            class="carousel-caption d-flex flex-column justify-content-center align-items-center"
+            data-aos="fade-up"
+          >
+            <h1>Paso al futuro</h1>
+            <p>Soluciones que impulsan el cambio.</p>
+            <a href="proyectos.html" class="btn btn-outline-light btn-lg"
+              >Descubre nuestros Proyectos</a
+            >
           </div>
         </div>
       </div>
-    </div>
-  </section>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#hero"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#hero"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </section>
 
-  <!-- Sección de Contacto -->
-  <section id="contact" class="py-5 bg-light">
-    <div class="container">
-      <div class="row text-center mb-4" data-aos="fade-up">
-        <div class="col">
-          <h2>Contacto</h2>
-          <p>¿Tienes un proyecto o consulta? Escríbenos y transformemos el futuro juntos.</p>
+    <!-- Sección: Visión Global del Proyecto -->
+    <section id="vision-global">
+      <div class="container">
+        <h2 class="text-center" data-aos="fade-up">Visión Global</h2>
+        <p
+          class="lead text-center mb-5"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          Amazon busca reducir su impacto ambiental con iniciativas como The
+          Climate Pledge, orientadas a alcanzar la neutralidad en carbono para
+          2040. Integra principios de ecodiseño y economía circular en su
+          gestión, destacando ejemplos como el empaquetado “Frustration-Free” y
+          programas de reacondicionamiento de productos. Con ello, fomenta la
+          sostenibilidad en toda su cadena de valor, impulsando la innovación y
+          la colaboración con proveedores y socios.
+        </p>
+        <div class="row align-items-center">
+          <div class="col-md-6" data-aos="fade-right">
+            <img
+              src="media/foto4.jpeg"
+              alt="Visión global"
+              class="img-fluid rounded shadow-lg"
+            />
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <h3>Contexto y Objetivos</h3>
+            <p>
+              Nuestra propuesta parte de la experiencia acumulada y la
+              inspiración de referentes internacionales para dar un giro
+              disruptivo al sector. Queremos
+              <strong>reinventar la forma de producir y consumir</strong>,
+              generando un impacto positivo tangible en el medio ambiente y la
+              sociedad.
+            </p>
+            <ul>
+              <li>
+                Redefinir el ciclo de vida, minimizando la huella ecológica en
+                cada etapa.
+              </li>
+              <li>
+                Evolucionar las estrategias de ecodiseño más allá de los
+                estándares convencionales.
+              </li>
+              <li>
+                Fomentar la economía circular, integrando normativas clave en
+                soluciones escalables.
+              </li>
+              <li>
+                Lanzar una plataforma digital innovadora inspirada en Vinted
+                para impulsar la colaboración y la conciencia medioambiental.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Video de Presentación -->
+        <div class="row mt-5" data-aos="zoom-in">
+          <div class="col">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/lZMRbAl6xAw"
+                title="Presentación del Proyecto"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
-        <div class="col-md-8">
-          <form>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Nombre">
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Correo Electrónico">
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="4" placeholder="Mensaje"></textarea>
-            </div>
-            <button type="submit" class="btn btn-outline-dark w-100">Enviar Mensaje</button>
-          </form>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <div class="row text-center mb-4" data-aos="fade-up">
+          <div class="col">
+            <h2>Contacto</h2>
+            <p>
+              ¿Tienes un proyecto o consulta? Escríbenos y transformemos el
+              futuro juntos.
+            </p>
+          </div>
+        </div>
+        <div
+          class="row justify-content-center"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="col-md-8">
+            <form>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Nombre" />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Correo Electrónico"
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  rows="4"
+                  placeholder="Mensaje"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-outline-dark w-100">
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="py-3 bg-dark text-white">
-    <div class="container text-center">
-      <p class="mb-0">&copy; 2025 Innovación Tecnológica. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="py-3 bg-dark text-white">
+      <div class="container text-center">
+        <p class="mb-0">
+          &copy; 2025 Innovación Tecnológica. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
 
-  <!-- Scripts: Bootstrap Bundle y AOS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-  </script>
-</body>
+    <!-- Scripts: Bootstrap Bundle y AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+    </script>
+  </body>
 </html>
